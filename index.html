@@ -13,5 +13,13 @@
     <ul>
         <li>messages go here</li>
     </ul>
+
+    <script>
+        const get = async () => {
+            const response = await fetch('https://messageapi2withmongo.onrender.com/api/v1/messages');
+            const messages = await response.json();
+            console.log(messages);
+        }
+    </script>
 </body>
 </html>
