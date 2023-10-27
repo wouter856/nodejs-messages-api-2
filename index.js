@@ -5,10 +5,7 @@ const app = express();
 const port = 3000;
 
 // connect to mongodb
-mongoose.connect("mongodb://127.0.0.1:27017/messagesApi");
-
-//console log .env MONGODB
-console.log(process.env.MONGODB);
+mongoose.connect(process.env.MONGODB);
 
 // check if connection works
 const db = mongoose.connection;
